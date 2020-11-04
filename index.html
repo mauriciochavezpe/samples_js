@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic - Tac</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="title">
+            <h2>Tic - Tac</h2>
+        </div>
+        <div>
+            <div class="w-300 d-flex">
+                <div><button onclick="toolSelected(event)" class="btn"><span>X</span></button></div>
+                <div><button onclick="toolSelected(event)" class="btn"><span>O</span></button></div>
+            </div>
+            <div class="d-flex w-300 boder_tic-tac">
+                <div class="tic-tac">
+                    <div id="1" class="box"></div>
+                    <div id="2" class="box"></div>
+                    <div id="3" class="box"></div>
+                    <div id="4" class="box"></div>
+                    <div id="5" class="box"></div>
+                    <div id="6" class="box"></div>
+                    <div id="7" class="box"></div>
+                    <div id="8" class="box"></div>
+                    <div id="9" class="box"></div>
+                </div>
+            </div>
+            <div class="w-300 d-flex">
+                <div style="width:100%"><button class="btn-reset">Reset</button></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
