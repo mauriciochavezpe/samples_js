@@ -1,0 +1,141 @@
+:root {
+    --bg-btn-burger: #c3c3c3
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Roboto', 'sand-serif';
+}
+
+.nav {
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+}
+
+.box-menu-side {
+    background-color: tomato;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: translateX(-100%);
+}
+
+.box-menu-side ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box-menu-side ul li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.box-menu-side ul li a {
+    /* font-family: 'Roboto', sans-serif; */
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+p {
+    color: #c3c3c3;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.box-menu-btn {
+    float: right;
+    position: relative;
+    margin: 25px 15px;
+    z-index: 10;
+}
+
+.menu-side-visible {
+    transition: .3s;
+    transform: translateX(0);
+}
+
+.menu-side-oculto {
+    transition: .3s;
+    transform: translateX(-100%);
+}
+
+.burger {
+    height: 20px;
+    border-radius: 10%;
+    margin: 10px;
+}
+
+.burger .capa {
+    width: 3rem;
+    height: 0.3rem;
+    background-color: var(--bg-btn-burger);
+    transition: all .5s ease-in-out;
+    display: block;
+    border-radius: 10px;
+}
+
+.capa::before,
+.capa::after {
+    content: '';
+    width: 3rem;
+    height: 0.3rem;
+    display: block;
+    background-color: var(--bg-btn-burger);
+    position: absolute;
+    transition: all .5s ease-in-out;
+    border-radius: 10px;
+}
+
+.capa::before {
+    transform: translateY(-10px);
+}
+
+.capa::after {
+    transform: translateY(10px);
+}
+
+.burger.open .capa {
+    transform: translateX(-10px);
+    background-color: transparent;
+}
+
+.burger.open .capa::before {
+    transform: translateY(0.1rem) rotate(45deg);
+}
+
+.burger.open .capa::after {
+    transform: translateY(0.1rem) rotate(-45deg);
+}
+
+
+/* @keyframes rotacion{
+    0% {
+        transform: translate(0px, -2px) rotate(15deg);
+         
+    }
+    20% {
+        transform: translate(0px, -100px) rotate(90deg);
+        width: 40px;
+        height: 7px;
+    }
+   
+     100% {
+        transform: translate(0, 100px) rotate(45deg);
+        width: 40px;
+        height: 10px;
+    }
+} */
